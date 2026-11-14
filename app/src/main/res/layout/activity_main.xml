@@ -84,6 +84,7 @@
                 android:textStyle="bold"
                 android:paddingStart="2dp"
                 android:paddingEnd="2dp"
+                android:minWidth="0dp"
                 android:insetLeft="0dp"
                 android:insetRight="0dp"
                 android:onClick="btnPlayerOnePlus1" />
@@ -102,6 +103,7 @@
                 android:textStyle="bold"
                 android:paddingStart="2dp"
                 android:paddingEnd="2dp"
+                android:minWidth="0dp"
                 android:insetLeft="0dp"
                 android:insetRight="0dp"
                 android:onClick="btnPlayerOnePlus3" />
@@ -120,6 +122,7 @@
                 android:textStyle="bold"
                 android:paddingStart="2dp"
                 android:paddingEnd="2dp"
+                android:minWidth="0dp"
                 android:insetLeft="0dp"
                 android:insetRight="0dp"
                 android:onClick="btnPlayerOnePlus6" />
@@ -138,6 +141,7 @@
                 android:textStyle="bold"
                 android:paddingStart="2dp"
                 android:paddingEnd="2dp"
+                android:minWidth="0dp"
                 android:insetLeft="0dp"
                 android:insetRight="0dp"
                 android:onClick="btnPlayerOnePlus9" />
@@ -155,6 +159,7 @@
                 android:textStyle="bold"
                 android:paddingStart="2dp"
                 android:paddingEnd="2dp"
+                android:minWidth="0dp"
                 android:insetLeft="0dp"
                 android:insetRight="0dp"
                 android:onClick="btnPlayerOnePlus12" />
@@ -210,6 +215,7 @@
                 android:textStyle="bold"
                 android:paddingStart="2dp"
                 android:paddingEnd="2dp"
+                android:minWidth="0dp"
                 android:insetLeft="0dp"
                 android:insetRight="0dp"
                 android:onClick="btnPlayerTwoPlus1" />
@@ -228,6 +234,7 @@
                 android:textStyle="bold"
                 android:paddingStart="2dp"
                 android:paddingEnd="2dp"
+                android:minWidth="0dp"
                 android:insetLeft="0dp"
                 android:insetRight="0dp"
                 android:onClick="btnPlayerTwoPlus3" />
@@ -246,6 +253,7 @@
                 android:textStyle="bold"
                 android:paddingStart="2dp"
                 android:paddingEnd="2dp"
+                android:minWidth="0dp"
                 android:insetLeft="0dp"
                 android:insetRight="0dp"
                 android:onClick="btnPlayerTwoPlus6" />
@@ -264,6 +272,7 @@
                 android:textStyle="bold"
                 android:paddingStart="2dp"
                 android:paddingEnd="2dp"
+                android:minWidth="0dp"
                 android:insetLeft="0dp"
                 android:insetRight="0dp"
                 android:onClick="btnPlayerTwoPlus9" />
@@ -281,6 +290,7 @@
                 android:textStyle="bold"
                 android:paddingStart="2dp"
                 android:paddingEnd="2dp"
+                android:minWidth="0dp"
                 android:insetLeft="0dp"
                 android:insetRight="0dp"
                 android:onClick="btnPlayerTwoPlus12" />
