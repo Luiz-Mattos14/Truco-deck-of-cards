@@ -26,6 +26,12 @@ android {
             }
         }
     }
+    lint {
+        // Suppress version-update suggestions — Gradle version updates require
+        // explicit testing and should not be applied automatically.
+        disable += setOf("AndroidGradlePluginVersion")
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11

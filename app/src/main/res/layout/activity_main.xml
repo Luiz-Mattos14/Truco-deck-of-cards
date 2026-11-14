@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/md_background"
     tools:context=".MainActivity">
 
     <!-- Toolbar -->
@@ -304,7 +303,8 @@
             android:layout_weight="1"
             android:orientation="vertical"
             android:gravity="center_vertical"
-            android:paddingHorizontal="44dp">
+            android:paddingHorizontal="44dp"
+            tools:ignore="NestedWeights">
 
             <Button
                 android:id="@+id/btnHistorico"
