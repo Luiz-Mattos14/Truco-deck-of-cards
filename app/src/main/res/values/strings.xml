@@ -14,6 +14,18 @@
     <string name="btn_plus9" translatable="false">+9</string>
     <string name="btn_plus12" translatable="false">+12</string>
 
+    <!-- Accessibility content descriptions for score buttons -->
+    <string name="acc_player1_plus1">Add 1 point for Player 1</string>
+    <string name="acc_player1_plus3">Add 3 points for Player 1</string>
+    <string name="acc_player1_plus6">Add 6 points for Player 1</string>
+    <string name="acc_player1_plus9">Add 9 points for Player 1</string>
+    <string name="acc_player1_plus12">Add 12 points for Player 1</string>
+    <string name="acc_player2_plus1">Add 1 point for Player 2</string>
+    <string name="acc_player2_plus3">Add 3 points for Player 2</string>
+    <string name="acc_player2_plus6">Add 6 points for Player 2</string>
+    <string name="acc_player2_plus9">Add 9 points for Player 2</string>
+    <string name="acc_player2_plus12">Add 12 points for Player 2</string>
+
     <!-- Action buttons -->
     <string name="btn_history">Move History</string>
     <string name="btn_reset">Reset Score</string>
