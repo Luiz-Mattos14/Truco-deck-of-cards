@@ -33,9 +33,7 @@
     <color name="md_surface_variant">#D9E3F6</color>
     <color name="md_on_surface_variant">#41493E</color>
     <color name="md_surface_container_lowest">#FFFFFF</color>
-    <color name="md_surface_container_low">#EFF4FF</color>
     <color name="md_surface_container">#E6EEFF</color>
-    <color name="md_surface_container_high">#DEE9FC</color>
     <color name="md_inverse_surface">#27313F</color>
     <color name="md_inverse_on_surface">#EAF1FF</color>
 
@@ -44,6 +42,5 @@
     <color name="md_outline_variant">#C0C9BB</color>
 
     <!-- Utility -->
-    <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>

@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
+import java.util.Locale
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -36,9 +37,9 @@ class HistoryActivity : AppCompatActivity() {
         val winsP2 = intent.getIntExtra(EXTRA_WINS_PLAYER_TWO, 0)
 
         findViewById<TextView>(R.id.tvPlayer1Name).text = p1Name
-        findViewById<TextView>(R.id.tvPlayer1Wins).text = winsP1.toString()
+        findViewById<TextView>(R.id.tvPlayer1Wins).text = String.format(Locale.getDefault(), "%d", winsP1)
         findViewById<TextView>(R.id.tvPlayer2Name).text = p2Name
-        findViewById<TextView>(R.id.tvPlayer2Wins).text = winsP2.toString()
+        findViewById<TextView>(R.id.tvPlayer2Wins).text = String.format(Locale.getDefault(), "%d", winsP2)
     }
 
     // Configures the bottom navigation bar.

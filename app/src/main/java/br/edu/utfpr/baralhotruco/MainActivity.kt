@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
+import java.util.Locale
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
@@ -107,8 +108,8 @@ class MainActivity : AppCompatActivity() {
 
     // Syncs both score TextViews with the values stored in gameState.
     private fun updateScoreDisplay() {
-        tvPlayer1Score.text = gameState.scorePlayerOne.toString()
-        tvPlayer2Score.text = gameState.scorePlayerTwo.toString()
+        tvPlayer1Score.text = String.format(Locale.getDefault(), "%d", gameState.scorePlayerOne)
+        tvPlayer2Score.text = String.format(Locale.getDefault(), "%d", gameState.scorePlayerTwo)
     }
 
     // Announces the winner and offers two follow-up choices.

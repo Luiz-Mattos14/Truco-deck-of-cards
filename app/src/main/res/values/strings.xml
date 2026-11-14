@@ -5,14 +5,14 @@
     <!-- Players -->
     <string name="player1_default">Player 1:</string>
     <string name="player2_default">Player 2:</string>
-    <string name="score_initial">0</string>
+    <string name="score_initial" translatable="false">0</string>
 
-    <!-- Score buttons -->
-    <string name="btn_plus1">+1</string>
-    <string name="btn_plus3">+3</string>
-    <string name="btn_plus6">+6</string>
-    <string name="btn_plus9">+9</string>
-    <string name="btn_plus12">+12</string>
+    <!-- Score buttons — symbols, never translated -->
+    <string name="btn_plus1" translatable="false">+1</string>
+    <string name="btn_plus3" translatable="false">+3</string>
+    <string name="btn_plus6" translatable="false">+6</string>
+    <string name="btn_plus9" translatable="false">+9</string>
+    <string name="btn_plus12" translatable="false">+12</string>
 
     <!-- Action buttons -->
     <string name="btn_history">Move History</string>
