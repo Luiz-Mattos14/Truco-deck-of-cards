@@ -1,3 +1,30 @@
 <resources>
-    <string name="app_name">BaralhoTruco</string>
+    <string name="app_name">Baralho Truco</string>
+    <string name="screen_title_main">Placar Da Partida</string>
+
+    <!-- Jogadores -->
+    <string name="player1_default">Jogador 1:</string>
+    <string name="player2_default">Jogador 2:</string>
+    <string name="score_initial">0</string>
+
+    <!-- Botões de pontuação -->
+    <string name="btn_plus1">+1</string>
+    <string name="btn_plus3">+3</string>
+    <string name="btn_plus6">+6</string>
+    <string name="btn_plus9">+9</string>
+    <string name="btn_plus12">+12</string>
+
+    <!-- Botões de ação -->
+    <string name="btn_history">Hist. de Jogadas</string>
+    <string name="btn_reset">Zerar Histórico</string>
+    <string name="btn_names">Inf. Nomes</string>
+
+    <!-- Bottom Navigation -->
+    <string name="nav_score">Placar</string>
+    <string name="nav_history">Histórico</string>
+    <string name="nav_stats">Estatísticas</string>
+    <string name="nav_settings">Ajustes</string>
+
+    <!-- Toolbar -->
+    <string name="action_account">Conta</string>
 </resources>

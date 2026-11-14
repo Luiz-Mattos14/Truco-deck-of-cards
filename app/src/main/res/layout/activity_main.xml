@@ -1,19 +1,337 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/md_background"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <!-- Toolbar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="@color/md_primary">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/md_primary"
+            app:title="@string/screen_title_main"
+            app:titleTextColor="@color/white" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Conteúdo -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="16dp">
+
+        <!-- ===== JOGADOR 1 ===== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvPlayer1Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/player1_default"
+                android:textColor="@color/md_on_surface"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvPlayer1Score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/score_initial"
+                android:textColor="@color/md_primary"
+                android:textSize="48sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Botões pontuação – Jogador 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnJ1Tento"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:backgroundTint="@color/md_primary"
+                android:text="@string/btn_plus1"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:insetLeft="0dp"
+                android:insetRight="0dp"
+                android:onClick="btnPlayerOnePlus1" />
+
+            <Button
+                android:id="@+id/btnJ1Truco"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:backgroundTint="@color/md_primary"
+                android:text="@string/btn_plus3"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:insetLeft="0dp"
+                android:insetRight="0dp"
+                android:onClick="btnPlayerOnePlus3" />
+
+            <Button
+                android:id="@+id/btnJ1Seis"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:backgroundTint="@color/md_primary"
+                android:text="@string/btn_plus6"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:insetLeft="0dp"
+                android:insetRight="0dp"
+                android:onClick="btnPlayerOnePlus6" />
+
+            <Button
+                android:id="@+id/btnJ1Nove"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:backgroundTint="@color/md_primary"
+                android:text="@string/btn_plus9"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:insetLeft="0dp"
+                android:insetRight="0dp"
+                android:onClick="btnPlayerOnePlus9" />
+
+            <Button
+                android:id="@+id/btnJ1Doze"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:backgroundTint="@color/md_primary"
+                android:text="@string/btn_plus12"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:insetLeft="0dp"
+                android:insetRight="0dp"
+                android:onClick="btnPlayerOnePlus12" />
+
+        </LinearLayout>
+
+        <!-- ===== JOGADOR 2 ===== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="24dp">
+
+            <TextView
+                android:id="@+id/tvPlayer2Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/player2_default"
+                android:textColor="@color/md_on_surface"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvPlayer2Score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/score_initial"
+                android:textColor="@color/md_primary"
+                android:textSize="48sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Botões pontuação – Jogador 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnJ2Tento"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:backgroundTint="@color/md_primary"
+                android:text="@string/btn_plus1"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:insetLeft="0dp"
+                android:insetRight="0dp"
+                android:onClick="btnPlayerTwoPlus1" />
+
+            <Button
+                android:id="@+id/btnJ2Truco"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:backgroundTint="@color/md_primary"
+                android:text="@string/btn_plus3"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:insetLeft="0dp"
+                android:insetRight="0dp"
+                android:onClick="btnPlayerTwoPlus3" />
+
+            <Button
+                android:id="@+id/btnJ2Seis"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:backgroundTint="@color/md_primary"
+                android:text="@string/btn_plus6"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:insetLeft="0dp"
+                android:insetRight="0dp"
+                android:onClick="btnPlayerTwoPlus6" />
+
+            <Button
+                android:id="@+id/btnJ2Nove"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:backgroundTint="@color/md_primary"
+                android:text="@string/btn_plus9"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:insetLeft="0dp"
+                android:insetRight="0dp"
+                android:onClick="btnPlayerTwoPlus9" />
+
+            <Button
+                android:id="@+id/btnJ2Doze"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:backgroundTint="@color/md_primary"
+                android:text="@string/btn_plus12"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:insetLeft="0dp"
+                android:insetRight="0dp"
+                android:onClick="btnPlayerTwoPlus12" />
+
+        </LinearLayout>
+
+        <!-- ===== BOTÕES DE AÇÃO ===== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="44dp">
+
+            <Button
+                android:id="@+id/btnHistorico"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:backgroundTint="@color/md_surface_container"
+                android:text="@string/btn_history"
+                android:textColor="@color/md_on_surface"
+                android:onClick="onHistorico" />
+
+            <Button
+                android:id="@+id/btnZerarPartida"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/md_error_container"
+                android:text="@string/btn_reset"
+                android:textColor="@color/md_on_error_container"
+                android:onClick="onZerarPartida" />
+
+            <Button
+                android:id="@+id/btnEditarNomes"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/md_surface_container"
+                android:text="@string/btn_names"
+                android:textColor="@color/md_on_surface"
+                android:onClick="onEditarNomes" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_nav_menu" />
+
+</LinearLayout>
