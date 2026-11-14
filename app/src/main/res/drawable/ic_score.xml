@@ -19,7 +19,7 @@
         android:fillColor="@android:color/black"
         android:pathData="M13,10H18V12H13Z M13,14H16V16H13Z" />
 
-    <!-- Divisória central -->
+    <!-- Central divider -->
     <path
         android:fillColor="@android:color/black"
         android:pathData="M11.5,8H12.5V19H11.5Z" />

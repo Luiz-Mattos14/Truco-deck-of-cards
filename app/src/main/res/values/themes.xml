@@ -20,7 +20,7 @@
         <item name="colorOnError">@color/md_on_error</item>
         <item name="colorErrorContainer">@color/md_error_container</item>
         <item name="colorOnErrorContainer">@color/md_on_error_container</item>
-        <!-- Background e Surface -->
+        <!-- Background and Surface -->
         <item name="android:colorBackground">@color/md_background</item>
         <item name="colorOnBackground">@color/md_on_background</item>
         <item name="colorSurface">@color/md_surface</item>
@@ -34,7 +34,7 @@
 
     <style name="Theme.BaralhoTruco" parent="Base.Theme.BaralhoTruco" />
 
-    <!-- ActionBar verde com texto e ícones brancos -->
+    <!-- Green ActionBar with white text and icons -->
     <style name="Widget.BaralhoTruco.ActionBar" parent="Widget.AppCompat.ActionBar.Solid">
         <item name="background">@color/md_primary</item>
         <item name="elevation">4dp</item>
@@ -45,7 +45,7 @@
         <item name="colorControlNormal">@color/white</item>
     </style>
 
-    <!-- Tipografia -->
+    <!-- Typography -->
     <style name="TextAppearance.BaralhoTruco.Score" parent="TextAppearance.Material3.DisplaySmall">
         <item name="android:textSize">56sp</item>
         <item name="android:textStyle">bold</item>
@@ -63,7 +63,7 @@
         <item name="android:textColor">@color/md_on_surface</item>
     </style>
 
-    <!-- Botões de pontuação (+1, +3...) -->
+    <!-- Score buttons (+1, +3...) -->
     <style name="Widget.BaralhoTruco.ScoreButton" parent="Widget.Material3.Button">
         <item name="android:backgroundTint">@color/md_primary</item>
         <item name="android:textColor">@color/md_on_primary</item>
@@ -78,14 +78,14 @@
         <item name="android:insetRight">0dp</item>
     </style>
 
-    <!-- Botão de ação (Hist. de Jogadas, Inf. Nomes) -->
+    <!-- Action button (Move History, Edit Names) -->
     <style name="Widget.BaralhoTruco.ActionButton" parent="Widget.Material3.Button.TonalButton">
         <item name="android:backgroundTint">@color/md_surface_container</item>
         <item name="android:textColor">@color/md_on_surface</item>
         <item name="cornerRadius">12dp</item>
     </style>
 
-    <!-- Botão de reset (Zerar Histórico) -->
+    <!-- Reset button (Reset Game) -->
     <style name="Widget.BaralhoTruco.ResetButton" parent="Widget.Material3.Button.TonalButton">
         <item name="android:backgroundTint">@color/md_error_container</item>
         <item name="android:textColor">@color/md_on_error_container</item>

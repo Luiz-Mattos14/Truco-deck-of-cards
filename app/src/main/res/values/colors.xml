@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Primary - Verde Feltro -->
+    <!-- Primary - Felt Green -->
     <color name="md_primary">#1B5E20</color>
     <color name="md_on_primary">#FFFFFF</color>
     <color name="md_primary_container">#00450D</color>
     <color name="md_on_primary_container">#90D689</color>
     <color name="md_inverse_primary">#91D78A</color>
 
-    <!-- Secondary - Âmbar Vitória -->
+    <!-- Secondary - Victory Amber -->
     <color name="md_secondary">#7E5700</color>
     <color name="md_on_secondary">#FFFFFF</color>
     <color name="md_secondary_container">#FEB300</color>
     <color name="md_on_secondary_container">#6A4800</color>
 
-    <!-- Tertiary - Vermelho Reset -->
+    <!-- Tertiary - Reset Red -->
     <color name="md_tertiary">#7C0007</color>
     <color name="md_on_tertiary">#FFFFFF</color>
     <color name="md_tertiary_container">#A60B12</color>
@@ -25,7 +25,7 @@
     <color name="md_error_container">#FFDAD6</color>
     <color name="md_on_error_container">#93000A</color>
 
-    <!-- Background e Surface -->
+    <!-- Background and Surface -->
     <color name="md_background">#F8F9FF</color>
     <color name="md_on_background">#121C2A</color>
     <color name="md_surface">#F8F9FF</color>
