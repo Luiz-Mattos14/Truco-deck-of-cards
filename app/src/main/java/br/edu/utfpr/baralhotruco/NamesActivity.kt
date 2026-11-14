@@ -43,15 +43,17 @@ class NamesActivity : AppCompatActivity() {
     }
 
     // Configures the bottom navigation bar.
-    // 1. Marks the Score tab as selected — this screen is part of the main game setup.
-    // 2. Score tap navigates back to MainActivity clearing the back stack.
-    // 3. History tap navigates to HistoryActivity.
-    // 4. Both navigation taps return false so the visual selection does not change.
+    // 1. Marks the Names (Ajustes) tab as selected — this is the names screen.
+    // 2. Names tap returns true → BottomNav keeps Names highlighted (already here).
+    // 3. Score tap navigates back to MainActivity clearing the back stack.
+    // 4. History tap navigates to HistoryActivity (CLEAR_TOP reuses its existing instance).
+    // 5. Navigation taps return false so the visual selection does not change.
     private fun setupBottomNav() {
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNav)
-        bottomNav.selectedItemId = R.id.nav_score
+        bottomNav.selectedItemId = R.id.nav_names
         bottomNav.setOnItemSelectedListener { item ->
             when (item.itemId) {
+                R.id.nav_names -> true
                 R.id.nav_score -> {
                     val intent = Intent(this, MainActivity::class.java)
                     intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
@@ -67,6 +69,12 @@ class NamesActivity : AppCompatActivity() {
                 else -> false
             }
         }
+    }
+
+    // Resets both EditText fields to the default player names.
+    fun onResetNames(view: View) {
+        etPlayer1Name.setText(getString(R.string.player1_default).trimEnd(':').trim())
+        etPlayer2Name.setText(getString(R.string.player2_default).trimEnd(':').trim())
     }
 
     // Handles the Confirm button click.

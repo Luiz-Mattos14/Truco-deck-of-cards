@@ -45,9 +45,9 @@ class HistoryActivity : AppCompatActivity() {
     // 1. Marks History as the selected tab before setting the listener,
     //    so the assignment itself does not trigger navigation.
     // 2. History tap returns true  → BottomNav keeps History highlighted (already here).
-    // 3. Score tap returns false   → BottomNav does NOT change the visual selection,
-    //    so History stays highlighted while MainActivity opens.
-    // 4. Any other tab returns false (not yet implemented).
+    // 3. Score tap navigates back to MainActivity (CLEAR_TOP keeps the existing instance).
+    // 4. Names tap signals MainActivity to open NamesActivity via EXTRA_OPEN_NAMES.
+    // 5. All navigation taps return false so the visual selection does not change.
     private fun setupBottomNav() {
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNav)
         bottomNav.selectedItemId = R.id.nav_history
@@ -57,6 +57,13 @@ class HistoryActivity : AppCompatActivity() {
                 R.id.nav_score -> {
                     val intent = Intent(this, MainActivity::class.java)
                     intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+                    startActivity(intent)
+                    false
+                }
+                R.id.nav_names -> {
+                    val intent = Intent(this, MainActivity::class.java)
+                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+                    intent.putExtra(MainActivity.EXTRA_OPEN_NAMES, true)
                     startActivity(intent)
                     false
                 }

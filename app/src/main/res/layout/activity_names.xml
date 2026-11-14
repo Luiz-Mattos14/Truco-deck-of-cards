@@ -102,6 +102,17 @@
             android:textColor="@color/white"
             android:onClick="onConfirm" />
 
+        <!-- Reset names button -->
+        <Button
+            android:id="@+id/btnResetNames"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/md_surface_container"
+            android:text="@string/btn_reset_names"
+            android:textColor="@color/md_on_surface"
+            android:onClick="onResetNames" />
+
     </LinearLayout>
 
     <!-- Bottom Navigation -->

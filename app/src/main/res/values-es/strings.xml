@@ -34,6 +34,7 @@
     <string name="screen_title_names">Nombres de Jugadores</string>
     <string name="hint_player_name">Ingrese nombre</string>
     <string name="btn_confirm">Confirmar</string>
+    <string name="btn_reset_names">Restaurar Nombres</string>
 
     <!-- Diálogo fin de juego -->
     <string name="dialog_game_over_title">¡Fin del Juego!</string>

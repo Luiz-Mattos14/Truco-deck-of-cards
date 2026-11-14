@@ -71,6 +71,9 @@ class MainActivity : AppCompatActivity() {
             updateScoreDisplay()
             Toast.makeText(this, R.string.toast_history_reset, Toast.LENGTH_SHORT).show()
         }
+        if (intent.getBooleanExtra(EXTRA_OPEN_NAMES, false)) {
+            openNames()
+        }
     }
 
     // Configures the bottom navigation bar.
@@ -86,6 +89,7 @@ class MainActivity : AppCompatActivity() {
             when (item.itemId) {
                 R.id.nav_score -> true
                 R.id.nav_history -> { openHistory(); false }
+                R.id.nav_names -> { openNames(); false }
                 else -> false
             }
         }
@@ -207,5 +211,6 @@ class MainActivity : AppCompatActivity() {
     companion object {
         // Extra key used by HistoryActivity to signal that win counters should be zeroed.
         const val EXTRA_RESET_WINS = "reset_wins"
+        const val EXTRA_OPEN_NAMES = "open_names"
     }
 }
