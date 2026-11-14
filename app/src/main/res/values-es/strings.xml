@@ -30,6 +30,11 @@
     <string name="toast_score_reset">¡Puntuación reiniciada!</string>
     <string name="toast_history_reset">¡Historial reiniciado!</string>
 
+    <!-- Pantalla de nombres -->
+    <string name="screen_title_names">Nombres de Jugadores</string>
+    <string name="hint_player_name">Ingrese nombre</string>
+    <string name="btn_confirm">Confirmar</string>
+
     <!-- Diálogo fin de juego -->
     <string name="dialog_game_over_title">¡Fin del Juego!</string>
     <string name="dialog_game_over_message">¡%s ganó la partida!</string>

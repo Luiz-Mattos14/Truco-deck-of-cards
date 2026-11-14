@@ -6,6 +6,8 @@ import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -21,6 +23,19 @@ class MainActivity : AppCompatActivity() {
     private lateinit var tvPlayer2Name: TextView
     private lateinit var tvPlayer1Score: TextView
     private lateinit var tvPlayer2Score: TextView
+
+    // Launcher for NamesActivity — registered before onCreate so the system can restore
+    // it across process restarts. When RESULT_OK is received, both player name TextViews
+    // are updated with the values chosen on the names screen.
+    private val namesLauncher: ActivityResultLauncher<Intent> =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            if (result.resultCode == RESULT_OK) {
+                tvPlayer1Name.text = result.data?.getStringExtra(NamesActivity.EXTRA_PLAYER_ONE_NAME)
+                    ?: return@registerForActivityResult
+                tvPlayer2Name.text = result.data?.getStringExtra(NamesActivity.EXTRA_PLAYER_TWO_NAME)
+                    ?: return@registerForActivityResult
+            }
+        }
 
     // Sets up the screen on first creation.
     // 1. Enables edge-to-edge rendering and inflates the layout.
@@ -63,7 +78,6 @@ class MainActivity : AppCompatActivity() {
     // 2. Score tap returns true  → BottomNav keeps Score highlighted (already here).
     // 3. History tap returns false → BottomNav does NOT change the visual selection,
     //    so Score stays highlighted even while HistoryActivity is opening.
-    //    This prevents the tab from appearing "wrong" when the user returns.
     // 4. Any other tab returns false (not yet implemented).
     private fun setupBottomNav() {
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNav)
@@ -142,6 +156,15 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    // Builds an Intent with the current player names and launches NamesActivity for a result.
+    // The names are pre-filled in the EditText fields on the names screen.
+    private fun openNames() {
+        val intent = Intent(this, NamesActivity::class.java)
+        intent.putExtra(NamesActivity.EXTRA_PLAYER_ONE_NAME, tvPlayer1Name.text.toString())
+        intent.putExtra(NamesActivity.EXTRA_PLAYER_TWO_NAME, tvPlayer2Name.text.toString())
+        namesLauncher.launch(intent)
+    }
+
     // Adds 1 tento to Player 1 (simple round win).
     fun btnPlayerOnePlus1(view: View) = addPoints(1, 1)
 
@@ -178,8 +201,8 @@ class MainActivity : AppCompatActivity() {
     // Resets only the current match scores (Zerar Pontuação button).
     fun onResetGame(view: View) = resetScore()
 
-    // Opens the dialog to edit player names (not yet implemented — Questão 4).
-    fun onEditNames(view: View) { }
+    // Opens the names screen so the user can customize both player names (Questão 4).
+    fun onEditNames(view: View) = openNames()
 
     companion object {
         // Extra key used by HistoryActivity to signal that win counters should be zeroed.
