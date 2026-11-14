@@ -126,4 +126,17 @@ class HistoryActivityTest {
         onView(withId(R.id.btnResetHistory)).perform(click())
         onView(withId(R.id.tvPlayer1Score)).check(matches(isDisplayed()))
     }
+
+    // Verifies that clicking the Names (Ajustes) tab navigates back to MainActivity.
+    // HistoryActivity routes nav_names through MainActivity so the ActivityResultLauncher
+    // that owns NamesActivity is always the one opening it.
+    // 1. Launches HistoryActivity.
+    // 2. Clicks nav_names in the BottomNavigationView.
+    // 3. Checks that tvPlayer1Score is visible, confirming MainActivity is in the foreground.
+    @Test
+    fun bottomNav_namesTab_navigatesToMainActivity() {
+        launch()
+        onView(withId(R.id.nav_names)).perform(click())
+        onView(withId(R.id.tvPlayer1Score)).check(matches(isDisplayed()))
+    }
 }

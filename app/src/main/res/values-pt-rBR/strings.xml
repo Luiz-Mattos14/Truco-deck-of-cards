@@ -15,16 +15,10 @@
     <!-- Bottom Navigation -->
     <string name="nav_score">Placar</string>
     <string name="nav_history">Histórico</string>
-    <string name="nav_stats">Estatísticas</string>
     <string name="nav_settings">Ajustes</string>
-
-    <!-- Toolbar -->
-    <string name="action_account">Conta</string>
 
     <!-- Tela de histórico -->
     <string name="activity_history_title">Histórico de Jogadas</string>
-    <string name="history_empty">Nenhuma jogada registrada ainda.</string>
-    <string name="history_total">(Total: %d)</string>
 
     <!-- Mensagens Toast -->
     <string name="toast_score_reset">Pontuação zerada!</string>

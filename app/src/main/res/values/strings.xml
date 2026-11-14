@@ -23,16 +23,10 @@
     <!-- Bottom Navigation -->
     <string name="nav_score">Score</string>
     <string name="nav_history">History</string>
-    <string name="nav_stats">Statistics</string>
     <string name="nav_settings">Settings</string>
-
-    <!-- Toolbar -->
-    <string name="action_account">Account</string>
 
     <!-- History screen -->
     <string name="activity_history_title">Move History</string>
-    <string name="history_empty">No moves recorded yet.</string>
-    <string name="history_total">(Total: %d)</string>
 
     <!-- Toast messages -->
     <string name="toast_score_reset">Score reset!</string>

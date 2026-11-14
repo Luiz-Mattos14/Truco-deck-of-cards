@@ -127,4 +127,26 @@ class MainActivityTest {
             assertEquals(R.id.nav_score, nav.selectedItemId)
         }
     }
+
+    // Verifies that the Score tab remains selected after tapping the Names (Ajustes) tab.
+    // The listener returns false for nav_names so the visual selection stays on nav_score.
+    // 1. Clicks nav_names — NamesActivity opens, but Score tab must stay highlighted.
+    // 2. Checks that nav_score is still the selected item (not nav_names).
+    @Test
+    fun bottomNav_scoreTabRemainsSelectedAfterOpeningNames() {
+        onView(withId(R.id.nav_names)).perform(click())
+        onView(withId(R.id.bottomNav)).check { view, _ ->
+            val nav = view as BottomNavigationView
+            assertEquals(R.id.nav_score, nav.selectedItemId)
+        }
+    }
+
+    // Verifies that clicking the Edit Names button opens NamesActivity.
+    // 1. Clicks btnEditarNomes.
+    // 2. Checks that the Player 1 EditText is visible, confirming NamesActivity is in the foreground.
+    @Test
+    fun editNamesButton_launchesNamesActivity() {
+        onView(withId(R.id.btnEditarNomes)).perform(click())
+        onView(withId(R.id.etPlayer1Name)).check(matches(isDisplayed()))
+    }
 }

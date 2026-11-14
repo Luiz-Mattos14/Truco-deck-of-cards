@@ -15,16 +15,10 @@
     <!-- Navegación inferior -->
     <string name="nav_score">Marcador</string>
     <string name="nav_history">Historial</string>
-    <string name="nav_stats">Estadísticas</string>
     <string name="nav_settings">Ajustes</string>
-
-    <!-- Barra de herramientas -->
-    <string name="action_account">Cuenta</string>
 
     <!-- Pantalla de historial -->
     <string name="activity_history_title">Historial de Jugadas</string>
-    <string name="history_empty">Aún no hay jugadas registradas.</string>
-    <string name="history_total">(Total: %d)</string>
 
     <!-- Mensajes Toast -->
     <string name="toast_score_reset">¡Puntuación reiniciada!</string>
