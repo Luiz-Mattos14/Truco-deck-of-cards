@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity() {
                     ?: return@registerForActivityResult
                 tvPlayer2Name.text = result.data?.getStringExtra(NamesActivity.EXTRA_PLAYER_TWO_NAME)
                     ?: return@registerForActivityResult
+                updateButtonContentDescriptions()
             }
         }
 
@@ -58,6 +59,7 @@ class MainActivity : AppCompatActivity() {
         tvPlayer1Score = findViewById(R.id.tvPlayer1Score)
         tvPlayer2Score = findViewById(R.id.tvPlayer2Score)
 
+        updateButtonContentDescriptions()
         setupBottomNav()
     }
 
@@ -208,6 +210,26 @@ class MainActivity : AppCompatActivity() {
 
     // Opens the names screen so the user can customize both player names (Questão 4).
     fun onEditNames(view: View) = openNames()
+
+    // Sets a unique contentDescription on every score button using the current player names.
+    // Called on first create and whenever player names change, so TalkBack announces
+    // "Jogador 1 +3" vs "Jogador 2 +3" instead of announcing "+3" twice.
+    private fun updateButtonContentDescriptions() {
+        val p1 = tvPlayer1Name.text.toString().trimEnd(':').trim()
+        val p2 = tvPlayer2Name.text.toString().trimEnd(':').trim()
+        listOf(
+            R.id.btnJ1Tento to "$p1 +1",
+            R.id.btnJ1Truco to "$p1 +3",
+            R.id.btnJ1Seis  to "$p1 +6",
+            R.id.btnJ1Nove  to "$p1 +9",
+            R.id.btnJ1Doze  to "$p1 +12",
+            R.id.btnJ2Tento to "$p2 +1",
+            R.id.btnJ2Truco to "$p2 +3",
+            R.id.btnJ2Seis  to "$p2 +6",
+            R.id.btnJ2Nove  to "$p2 +9",
+            R.id.btnJ2Doze  to "$p2 +12",
+        ).forEach { (id, desc) -> findViewById<View>(id).contentDescription = desc }
+    }
 
     companion object {
         // Extra key used by HistoryActivity to signal that win counters should be zeroed.

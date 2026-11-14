@@ -68,7 +68,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:orientation="horizontal"
-            tools:ignore="ButtonStyle">
+            tools:ignore="ButtonStyle,DuplicateSpeakableText">
 
             <Button
                 android:id="@+id/btnJ1Tento"
@@ -199,7 +199,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:orientation="horizontal"
-            tools:ignore="ButtonStyle">
+            tools:ignore="ButtonStyle,DuplicateSpeakableText">
 
             <Button
                 android:id="@+id/btnJ2Tento"
