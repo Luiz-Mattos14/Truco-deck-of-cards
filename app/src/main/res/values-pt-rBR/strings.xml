@@ -8,7 +8,8 @@
 
     <!-- Botões de ação -->
     <string name="btn_history">Hist. de Jogadas</string>
-    <string name="btn_reset">Zerar Partida</string>
+    <string name="btn_reset">Zerar Pontuação</string>
+    <string name="btn_reset_history">Zerar Histórico</string>
     <string name="btn_names">Inf. Nomes</string>
 
     <!-- Bottom Navigation -->
@@ -20,8 +21,18 @@
     <!-- Toolbar -->
     <string name="action_account">Conta</string>
 
+    <!-- Tela de histórico -->
+    <string name="activity_history_title">Histórico de Jogadas</string>
+    <string name="history_empty">Nenhuma jogada registrada ainda.</string>
+    <string name="history_total">(Total: %d)</string>
+
+    <!-- Mensagens Toast -->
+    <string name="toast_score_reset">Pontuação zerada!</string>
+    <string name="toast_history_reset">Histórico zerado!</string>
+
     <!-- Dialog fim de jogo -->
     <string name="dialog_game_over_title">Fim de Jogo!</string>
     <string name="dialog_game_over_message">%s venceu a partida!</string>
     <string name="dialog_new_game">Nova Partida</string>
+    <string name="dialog_view_history">Ver Histórico</string>
 </resources>
